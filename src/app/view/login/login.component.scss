@@ -1,0 +1,132 @@
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.container .caixa-login {
+  width: 960px;
+  display: flex;
+}
+
+.container .caixa-login h2 {
+  font-size: 30px;
+}
+
+.container .caixa-login .area-de-login {
+  width: 40%;
+  background: #58af9b;
+  border-radius: 15px 0px 0px 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container .caixa-login .area-de-login .primeiro-titulo, .p-titulo1{
+  color: #fff;
+}
+
+.container .caixa-login .area-de-login .p-titulo1{
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 0px;
+}
+
+.container .caixa-login .botao-entrar {
+  font-size: 10px;
+  padding: 10px 50px;
+  cursor: pointer;
+  font-weight: bold;
+  width: 150px;
+  margin-top: 1rem;
+  background-color: #58af9b;
+  border: 1px solid #fff;
+  border-radius: 15px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.container .caixa-login .criar-login {
+  width: 60%;
+  background: #fff;
+  border-radius: 0px 15px 15px 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.container .caixa-login .criar-login .segundo-titulo {
+  color: #58af9b;
+}
+
+.container .caixa-login .criar-login .p-titulo2 {
+  color: #7f8c8d;
+  font-size: 14px;
+  font-weight: 300;
+  line-height: 30px;
+}
+
+.container .caixa-login .criar-login .icones-gerais {
+  display: flex;
+  gap: 10px;
+}
+
+.container .caixa-login .criar-login .icones-gerais .icones-redes {
+  border: 1px solid #bdc3c7;
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  line-height: 35px;
+  text-align: center;
+  color: #95a5a6;
+}
+
+.container .caixa-login .criar-login .form {
+  display: flex;
+  flex-direction: column;
+  width: 55%;
+}
+
+
+.container .caixa-login .criar-login .form .form-login {
+  background-color: #ecf0f1;
+  display: flex;
+  align-items: center;
+  margin: 8px;
+  padding-left: 4px;
+  height: 45px;
+  color: #7f8c8d;
+  border: solid 1px #ecf0f1;
+
+}
+
+
+.container .caixa-login .criar-login .form input {
+  background-color: #ecf0f1;
+  margin: 8px;
+  width: 100%;
+  border: none;
+  height: 45px;
+}
+
+.container .caixa-login .criar-login .form .botao-form {
+  font-size: 10px;
+  padding: 10px 50px;
+  cursor: pointer;
+  font-weight: bold;
+  width: 150px;
+  align-self: center;
+  border: none;
+  margin-top: 1rem;
+  background-color: #58af9b;
+  border: 1px solid #58af9b;
+  border-radius: 15px;
+  text-transform: uppercase;
+  color: #fff;
+}
