@@ -6,11 +6,17 @@
   width: 100%;
   height: 100vh;
   font-family: 'Open Sans', sans-serif;
+  flex-direction: column;
 }
 
 .container .caixa-login {
   width: 960px;
   display: flex;
+}
+
+.container .caixa-login-two {
+  display: flex;
+  flex-direction: row-reverse;
 }
 
 .container .caixa-login h2 {
@@ -25,6 +31,10 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+.container .caixa-login .area-de-login-two {
+  border-radius: 0px 15px 15px 0px;
 }
 
 .container .caixa-login .area-de-login .primeiro-titulo, .p-titulo1{
@@ -51,6 +61,12 @@
   color: #fff;
 }
 
+.container .caixa-login .botao-entrar:hover {
+  background-color: #fff;
+  color: #58af9b;
+  cursor: pointer;
+}
+
 .container .caixa-login .criar-login {
   width: 60%;
   background: #fff;
@@ -59,6 +75,11 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  padding-bottom: 20px;
+}
+
+.container .caixa-login .criar-login-two {
+  border-radius: 15px 0px 0px 15px;
 }
 
 .container .caixa-login .criar-login .segundo-titulo {
@@ -85,6 +106,12 @@
   line-height: 35px;
   text-align: center;
   color: #95a5a6;
+}
+
+.container .caixa-login .criar-login .icones-gerais .icones-redes:hover {
+  background: #58af9b;
+  color: #fff;
+  cursor: pointer;
 }
 
 .container .caixa-login .criar-login .form {
@@ -129,4 +156,20 @@
   border-radius: 15px;
   text-transform: uppercase;
   color: #fff;
+}
+
+.container .caixa-login .criar-login .form .botao-form:hover {
+  cursor: pointer;
+  background-color: #fff;
+  border: 1px solid #58af9b;
+  color: #58af9b;
+}
+
+.container .caixa-login-two .form h4 {
+  color: #34495e;
+  font-size: 14px;
+  text-align: center;
+  text-decoration: underline;
+  font-style: italic;
+  margin: 0px;
 }
