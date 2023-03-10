@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { IUsuario } from 'src/app/interface/usuario';
+import { LoginService } from 'src/app/service/login.service';
 
 @Component({
   selector: 'app-login',
@@ -16,6 +18,7 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private fb: FormBuilder,
+    private service: LoginService
   ) { }
 
   ngOnInit(): void {
@@ -40,7 +43,17 @@ export class LoginComponent implements OnInit {
     console.log(this.formulario.controls)
     this.submetido = true
     if (this.formulario.valid){
-      alert("cadastro feito com sucesso")
+      const form = this.formulario.value
+      const id = Math.floor(Date.now() * Math.random())
+      const usuario: IUsuario = {
+        id : id,
+        nome: form.nome,
+        email: form.email,
+        senha: form.senha
+      }
+      this.service.cadastrar(usuario).subscribe(()=> {
+        this.btnEntrar()
+      })
     }
   }
 }
