@@ -12,6 +12,7 @@
 .container .caixa-login {
   width: 960px;
   display: flex;
+  height: 500px;
 }
 
 .container .caixa-login-two {
@@ -75,7 +76,6 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  padding-bottom: 20px;
 }
 
 .container .caixa-login .criar-login-two {
@@ -140,6 +140,13 @@
   width: 100%;
   border: none;
   height: 45px;
+}
+
+.container .caixa-login .criar-login .form span {
+  font-size: 14px;
+  font-family: 'Open Sans' sans-serif;
+  color: red;
+  padding-left: 12px;
 }
 
 .container .caixa-login .criar-login .form .botao-form {
