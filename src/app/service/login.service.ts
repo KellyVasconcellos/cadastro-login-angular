@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { IUsuario } from '../interface/usuario';
 
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -13,5 +14,9 @@ export class LoginService {
 
   cadastrar(usuario: IUsuario) {
     return this.http.post<IUsuario>(this.apiUsuario, usuario)
+  }
+
+  login(email: string) {
+    return this.http.get<IUsuario>(`${this.apiUsuario}?email=${email}`)
   }
 }

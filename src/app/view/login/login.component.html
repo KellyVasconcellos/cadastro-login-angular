@@ -1,63 +1,5 @@
 <div class="container">
-  <div class="caixa-login" *ngIf="inscrever">
-    <div class="area-de-login">
-      <h2 class="primeiro-titulo">Bem-Vindo, de volta!</h2>
-      <p class="p-titulo1">para se manter conectado, faça seu login</p>
-      <button class="botao-entrar" (click)="btnEntrar()" >Entrar</button>
-    </div>
-    <div class="criar-login">
-      <h2 class="segundo-titulo">Criar Conta</h2>
-      <div class="icones-gerais">
-        <div class="icones-redes">
-          <span><i class="fa-brands fa-facebook-f"></i></span>
-        </div>
-        <div class="icones-redes">
-          <span><i class="fa-brands fa-google-plus-g"></i></span>
-        </div>
-        <div class="icones-redes">
-          <span><i class="fa-brands fa-linkedin-in"></i></span>
-        </div>
-      </div>
-      <p class="p-titulo2">Ou use suas contas para se registrar:</p>
-      <form class="form" (ngSubmit)="cadastrar()" [formGroup]="formulario">
-
-        <label  class="form-login" for="nome">
-          <i class="far fa-user icon-modify"></i>
-          <input type="text" id="nome" placeholder="Nome" formControlName="nome">
-        </label>
-        <span *ngIf="(formulario.get('nome')?.touched || submetido) && formulario.get('nome')?.errors?.['required']">
-          Campo obrigatório
-        </span>
-
-        <label class="form-login" for="email">
-          <i class="far fa-envelope icon-modify"></i>
-          <input type="text" id="email" placeholder="E-mail" formControlName="email">
-        </label>
-        <span *ngIf="(formulario.get('email')?.touched || submetido) && formulario.get('email')?.errors?.['required']">
-          Campo obrigatório
-        </span>
-        <span *ngIf="formulario.get('email')?.touched && formulario.get('email')?.status === 'INVALID'">
-          Deve ser um e-mail válido
-        </span>
-
-        <label class="form-login" for="senha">
-          <i class="fas fa-lock icon-modify"></i>
-          <input type="password" id="senha" placeholder="Senha" formControlName="senha">
-        </label>
-        <span *ngIf="(formulario.get('senha')?.touched || submetido) && formulario.get('senha')?.errors?.['required']">
-          Campo obrigatório
-        </span>
-        <span *ngIf="formulario.get('senha')?.touched && formulario.get('senha')?.status === 'INVALID'">
-          A senha deve ter no mínimo 8 caracteres, pelo menos 1 letra maiúscula, 1 minúscula, 1 número e 1 caracter especial
-        </span>
-
-        <br>
-
-        <button class="botao-form" type="submit">Inscrever</button>
-      </form>
-    </div>
-  </div>
-  <div class="caixa-login caixa-login-two"  *ngIf="entrar">
+  <div class="caixa-login caixa-login-two">
     <div class="area-de-login area-de-login-two">
       <h2 class="primeiro-titulo">Olá, amigo!</h2>
       <p class="p-titulo1">cadastre os seus dados e comece a navegar conosco</p>
@@ -77,15 +19,22 @@
         </div>
       </div>
       <p class="p-titulo2">Ou use sua conta:</p>
-      <form class="form">
-        <label  class="form-login" for="nome">
+      <form class="form" (ngSubmit)="logar()" [formGroup]="forLogar">
+        <label  class="form-login" for="email">
           <i class="far fa-user icon-modify"></i>
-          <input type="text" id="nome" placeholder="Nome">
+          <input type="text" id="email" placeholder="E-mail" formControlName="email">
         </label>
+        <span *ngIf="forLogar.get('email')?.errors?.['required'] && submetido">
+          Campo obrigatório
+        </span>
         <label class="form-login" for="senha">
           <i class="fas fa-lock icon-modify"></i>
-          <input type="password" id="senha" placeholder="Senha">
+          <input type="password" id="senha" placeholder="Senha" formControlName="senha">
         </label>
+        <span *ngIf="forLogar.get('senha')?.errors?.['required'] && submetido">
+          Campo obrigatório
+        </span>
+        <span>{{mensagemErro}}</span>
         <br>
         <h4>Esqueceu sua senha?</h4>
         <button class="botao-form">Entrar</button>

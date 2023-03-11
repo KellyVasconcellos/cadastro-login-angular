@@ -11,6 +11,24 @@
       "nome": "Fernanda",
       "email": "fernanda.maria@outlook.com",
       "senha": "b3A4#@di"
+    },
+    {
+      "id": 575871836052,
+      "nome": "Alice",
+      "email": "alice@hotmail.com",
+      "senha": "d72A123#"
+    },
+    {
+      "id": 952121708953,
+      "nome": "Luciana",
+      "email": "luciana@hotmail.com",
+      "senha": "A123b@18"
+    },
+    {
+      "id": 370393892916,
+      "nome": "Clara",
+      "email": "clara.silva@gmail.com",
+      "senha": "Ba123#$#"
     }
   ]
 }

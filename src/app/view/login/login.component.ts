@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { IUsuario } from 'src/app/interface/usuario';
+import { Router } from '@angular/router';
 import { LoginService } from 'src/app/service/login.service';
 
 @Component({
@@ -10,49 +10,42 @@ import { LoginService } from 'src/app/service/login.service';
 })
 export class LoginComponent implements OnInit {
 
-  formulario! : FormGroup;
-
-  submetido = false
-  entrar = true
-  inscrever = false
+  forLogar! : FormGroup;
+  mensagemErro = "";
+  submetido = false;
 
   constructor(
     private fb: FormBuilder,
-    private service: LoginService
+    private service: LoginService,
+    private router: Router
   ) { }
 
   ngOnInit(): void {
-    this.formulario = this.fb.group({
-      nome: ['', [Validators.required]],
-      email: ['',[ Validators.required,  Validators.email]],
-      senha: ['', [Validators.required, Validators.pattern('^(?=.*?[!@#$%¨&*])(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}$')]]
+    this.forLogar = this.fb.group({
+      email: ['',[ Validators.required]],
+      senha: ['', [Validators.required]]
     })
   }
 
   btnInscrever(){
-    this.inscrever = true
-    this.entrar = false
+    this.router.navigateByUrl("/cadastrar")
   }
 
-  btnEntrar(){
-    this.entrar = true
-    this.inscrever = false
-  }
-
-  cadastrar():void {
-    console.log(this.formulario.controls)
+  logar():void {
     this.submetido = true
-    if (this.formulario.valid){
-      const form = this.formulario.value
-      const id = Math.floor(Date.now() * Math.random())
-      const usuario: IUsuario = {
-        id : id,
-        nome: form.nome,
-        email: form.email,
-        senha: form.senha
-      }
-      this.service.cadastrar(usuario).subscribe(()=> {
-        this.btnEntrar()
+    if (this.forLogar.valid){
+      const form = this.forLogar.value
+      this.service.login(form.email).subscribe((resposta : any)=> {
+        console.log(resposta)
+        if (resposta.length) {
+          if (resposta[0].senha === form.senha) {
+            this.router.navigateByUrl("/area-logada")
+          } else {
+            this.mensagemErro = "Usuário ou Senha inválida"
+          }
+        } else {
+          this.mensagemErro = "Usuário ou Senha inválida"
+        }
       })
     }
   }

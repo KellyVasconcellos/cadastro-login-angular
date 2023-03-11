@@ -6,11 +6,15 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './view/login/login.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { CadastrarComponent } from './view/cadastrar/cadastrar.component';
+import { AreaLogadaComponent } from './view/area-logada/area-logada.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    CadastrarComponent,
+    AreaLogadaComponent
   ],
   imports: [
     BrowserModule,
