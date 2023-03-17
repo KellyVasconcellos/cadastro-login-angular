@@ -1,5 +1,5 @@
 
-.container {
+.caixa {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,22 +9,22 @@
   flex-direction: column;
 }
 
-.container .caixa-login {
+.caixa .caixa-login {
   width: 960px;
   display: flex;
   height: 500px;
 }
 
-.container .caixa-login-two {
+.caixa .caixa-login-two {
   display: flex;
   flex-direction: row-reverse;
 }
 
-.container .caixa-login h2 {
+.caixa .caixa-login h2 {
   font-size: 30px;
 }
 
-.container .caixa-login .area-de-login {
+.caixa .caixa-login .area-de-login {
   width: 40%;
   background: #58af9b;
   border-radius: 15px 0px 0px 15px;
@@ -34,21 +34,21 @@
   flex-direction: column;
 }
 
-.container .caixa-login .area-de-login-two {
+.caixa .caixa-login .area-de-login-two {
   border-radius: 0px 15px 15px 0px;
 }
 
-.container .caixa-login .area-de-login .primeiro-titulo, .p-titulo1{
+.caixa .caixa-login .area-de-login .primeiro-titulo, .p-titulo1{
   color: #fff;
 }
 
-.container .caixa-login .area-de-login .p-titulo1{
+.caixa .caixa-login .area-de-login .p-titulo1{
   font-size: 14px;
   font-weight: 300;
   line-height: 0px;
 }
 
-.container .caixa-login .botao-entrar {
+.caixa .caixa-login .botao-entrar {
   font-size: 10px;
   padding: 10px 50px;
   cursor: pointer;
@@ -62,13 +62,13 @@
   color: #fff;
 }
 
-.container .caixa-login .botao-entrar:hover {
+.caixa .caixa-login .botao-entrar:hover {
   background-color: #fff;
   color: #58af9b;
   cursor: pointer;
 }
 
-.container .caixa-login .criar-login {
+.caixa .caixa-login .criar-login {
   width: 60%;
   background: #fff;
   border-radius: 0px 15px 15px 0px;
@@ -78,27 +78,27 @@
   flex-direction: column;
 }
 
-.container .caixa-login .criar-login-two {
+.caixa .caixa-login .criar-login-two {
   border-radius: 15px 0px 0px 15px;
 }
 
-.container .caixa-login .criar-login .segundo-titulo {
+.caixa .caixa-login .criar-login .segundo-titulo {
   color: #58af9b;
 }
 
-.container .caixa-login .criar-login .p-titulo2 {
+.caixa .caixa-login .criar-login .p-titulo2 {
   color: #7f8c8d;
   font-size: 14px;
   font-weight: 300;
   line-height: 30px;
 }
 
-.container .caixa-login .criar-login .icones-gerais {
+.caixa .caixa-login .criar-login .icones-gerais {
   display: flex;
   gap: 10px;
 }
 
-.container .caixa-login .criar-login .icones-gerais .icones-redes {
+.caixa .caixa-login .criar-login .icones-gerais .icones-redes {
   border: 1px solid #bdc3c7;
   border-radius: 50%;
   width: 35px;
@@ -108,20 +108,20 @@
   color: #95a5a6;
 }
 
-.container .caixa-login .criar-login .icones-gerais .icones-redes:hover {
+.caixa .caixa-login .criar-login .icones-gerais .icones-redes:hover {
   background: #58af9b;
   color: #fff;
   cursor: pointer;
 }
 
-.container .caixa-login .criar-login .form {
+.caixa .caixa-login .criar-login .form {
   display: flex;
   flex-direction: column;
   width: 55%;
 }
 
 
-.container .caixa-login .criar-login .form .form-login {
+.caixa .caixa-login .criar-login .form .form-login {
   background-color: #ecf0f1;
   display: flex;
   align-items: center;
@@ -134,7 +134,7 @@
 }
 
 
-.container .caixa-login .criar-login .form input {
+.caixa .caixa-login .criar-login .form input {
   background-color: #ecf0f1;
   margin: 8px;
   width: 100%;
@@ -142,14 +142,14 @@
   height: 45px;
 }
 
-.container .caixa-login .criar-login .form span {
+.caixa .caixa-login .criar-login .form span {
   font-size: 14px;
   font-family: 'Open Sans' sans-serif;
   color: red;
   padding-left: 12px;
 }
 
-.container .caixa-login .criar-login .form .botao-form {
+.caixa .caixa-login .criar-login .form .botao-form {
   font-size: 10px;
   padding: 10px 50px;
   cursor: pointer;
@@ -165,14 +165,14 @@
   color: #fff;
 }
 
-.container .caixa-login .criar-login .form .botao-form:hover {
+.caixa .caixa-login .criar-login .form .botao-form:hover {
   cursor: pointer;
   background-color: #fff;
   border: 1px solid #58af9b;
   color: #58af9b;
 }
 
-.container .caixa-login-two .form h4 {
+.caixa .caixa-login-two .form h4 {
   color: #34495e;
   font-size: 14px;
   text-align: center;

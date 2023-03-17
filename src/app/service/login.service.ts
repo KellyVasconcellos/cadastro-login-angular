@@ -19,4 +19,10 @@ export class LoginService {
   login(email: string) {
     return this.http.get<IUsuario>(`${this.apiUsuario}?email=${email}`)
   }
+
+  getUsuarios() {
+    return this.http.get<Array<IUsuario>>(this.apiUsuario)
+  }
+
+  
 }

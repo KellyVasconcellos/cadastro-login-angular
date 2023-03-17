@@ -1,1 +1,27 @@
-<p>Login Feito com sucesso!</p>
+<!-- <div class="container text-center">
+    <div class="row justify-content-center align-items-center vh-100 caixa-tabela">
+      <div class="col-auto">
+      </div>
+    </div>
+</div> -->
+
+<div class="caixa-tabela">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Nome</th>
+        <th scope="col">E-mail</th>
+        <th scope="col"></th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of usuarios">
+        <td>{{item.nome}}</td>
+        <td>{{item.email}}</td>
+        <td><i class="fa-solid fa-pen-to-square"></i></td>
+        <td><i class="fa-solid fa-trash"></i></td>
+      </tr>
+    </tbody>
+  </table>
+</div>

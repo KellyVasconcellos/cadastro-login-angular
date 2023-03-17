@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { IUsuario } from 'src/app/interface/usuario';
+import { LoginService } from 'src/app/service/login.service';
 
 @Component({
   selector: 'app-area-logada',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AreaLogadaComponent implements OnInit {
 
-  constructor() { }
+  usuarios! : Array<IUsuario>
+
+  constructor(
+    private service: LoginService
+  ) { }
 
   ngOnInit(): void {
+    this.service.getUsuarios().subscribe((resposta : Array<IUsuario>) => {
+      this.usuarios = resposta
+    })
   }
 
 }

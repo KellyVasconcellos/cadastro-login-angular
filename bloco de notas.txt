@@ -1,0 +1,3 @@
+- colocar um adm para ver a lista de todos os e-mails.
+- aparecer o usuario logado.
+- 

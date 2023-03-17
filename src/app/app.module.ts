@@ -8,6 +8,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { CadastrarComponent } from './view/cadastrar/cadastrar.component';
 import { AreaLogadaComponent } from './view/area-logada/area-logada.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { AreaLogadaComponent } from './view/area-logada/area-logada.component';
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
+    NgbModule
   ],
   providers: [],
   bootstrap: [AppComponent]
