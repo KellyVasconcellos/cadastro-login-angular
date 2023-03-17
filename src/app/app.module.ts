@@ -9,13 +9,15 @@ import { HttpClientModule } from '@angular/common/http';
 import { CadastrarComponent } from './view/cadastrar/cadastrar.component';
 import { AreaLogadaComponent } from './view/area-logada/area-logada.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { ModalDeletarComponent } from './components/modal-deletar/modal-deletar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     CadastrarComponent,
-    AreaLogadaComponent
+    AreaLogadaComponent,
+    ModalDeletarComponent
   ],
   imports: [
     BrowserModule,

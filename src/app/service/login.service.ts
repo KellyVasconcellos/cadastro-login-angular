@@ -24,5 +24,9 @@ export class LoginService {
     return this.http.get<Array<IUsuario>>(this.apiUsuario)
   }
 
-  
+  deletarUsuario(id: number) {
+    return this.http.delete<IUsuario>(`${this.apiUsuario}/${id}`)
+  }
+
+
 }
