@@ -10,7 +10,7 @@ import { LoginService } from 'src/app/service/login.service';
 })
 export class LoginComponent implements OnInit {
 
-  forLogar! : FormGroup;
+  formLogar! : FormGroup;
   mensagemErro = "";
   submetido = false;
 
@@ -21,7 +21,7 @@ export class LoginComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.forLogar = this.fb.group({
+    this.formLogar = this.fb.group({
       email: ['',[ Validators.required]],
       senha: ['', [Validators.required]]
     })
@@ -33,8 +33,8 @@ export class LoginComponent implements OnInit {
 
   logar():void {
     this.submetido = true
-    if (this.forLogar.valid){
-      const form = this.forLogar.value
+    if (this.formLogar.valid){
+      const form = this.formLogar.value
       this.service.login(form.email).subscribe((resposta : any)=> {
         console.log(resposta)
         if (resposta.length) {

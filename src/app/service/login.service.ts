@@ -28,5 +28,9 @@ export class LoginService {
     return this.http.delete<IUsuario>(`${this.apiUsuario}/${id}`)
   }
 
+  editarUsuario(usuario: IUsuario) {
+    return this.http.put<IUsuario>(`${this.apiUsuario}/${usuario.id}`, usuario)
+  }
+
 
 }

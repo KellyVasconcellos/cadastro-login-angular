@@ -10,6 +10,7 @@ import { CadastrarComponent } from './view/cadastrar/cadastrar.component';
 import { AreaLogadaComponent } from './view/area-logada/area-logada.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ModalDeletarComponent } from './components/modal-deletar/modal-deletar.component';
+import { ModalEditarComponent } from './components/modal-editar/modal-editar.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { ModalDeletarComponent } from './components/modal-deletar/modal-deletar.
     LoginComponent,
     CadastrarComponent,
     AreaLogadaComponent,
-    ModalDeletarComponent
+    ModalDeletarComponent,
+    ModalEditarComponent
   ],
   imports: [
     BrowserModule,

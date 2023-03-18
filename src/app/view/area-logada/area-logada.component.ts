@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Subject, timeout } from 'rxjs';
 import { ModalDeletarComponent } from 'src/app/components/modal-deletar/modal-deletar.component';
+import { ModalEditarComponent } from 'src/app/components/modal-editar/modal-editar.component';
 import { IUsuario } from 'src/app/interface/usuario';
 import { LoginService } from 'src/app/service/login.service';
 
@@ -18,6 +19,8 @@ export class AreaLogadaComponent implements OnInit {
 
   alert = false
 
+  mensagem  = ""
+
   constructor(
     private service: LoginService,
     private _modalService: NgbModal,
@@ -32,12 +35,34 @@ export class AreaLogadaComponent implements OnInit {
     })
   }
 
-  open(id:number) {
+  modalDeletar(id:number) {
     const modal = this._modalService.open(ModalDeletarComponent, { centered: true });
     modal.closed.subscribe(() => {
       this.service.deletarUsuario(id).subscribe(() => {
         this.getUsuarios()
         this.alert = true
+        this.mensagem = "Usuário excluído com sucesso!"
+        setTimeout(() => {
+          this.alert = false
+        }, 3000);
+      })
+    })
+  }
+
+  modalEditar(id:number) {
+    const modal = this._modalService.open(ModalEditarComponent, { centered: true });
+    modal.closed.subscribe((resposta) => {
+      console.log(resposta)
+      const usuario: IUsuario = {
+        id: id,
+        nome: resposta.nome,
+        email: resposta.email,
+        senha: resposta.senha,
+      }
+      this.service.editarUsuario(usuario).subscribe(() => {
+        this.getUsuarios()
+        this.alert = true
+        this.mensagem = "Usuário alterado com sucesso!"
         setTimeout(() => {
           this.alert = false
         }, 3000);

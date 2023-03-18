@@ -1,0 +1,71 @@
+.fomulario {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+
+.form .form-login {
+  background-color: #ecf0f1;
+  display: flex;
+  align-items: center;
+  margin: 8px;
+  padding-left: 4px;
+  height: 45px;
+  color: #7f8c8d;
+  border: solid 1px #ecf0f1;
+
+}
+
+.form input {
+  background-color: #ecf0f1;
+  margin: 8px;
+  width: 100%;
+  border: none;
+  height: 45px;
+}
+
+.form span {
+  font-size: 14px;
+  font-family: 'Open Sans' sans-serif;
+  color: red;
+  padding-left: 12px;
+}
+
+.form .botao-form {
+  font-size: 10px;
+  padding: 10px 50px;
+  cursor: pointer;
+  font-weight: bold;
+  width: 150px;
+  align-self: center;
+  border: none;
+  margin-top: 1rem;
+  background-color: #58af9b;
+  border: 1px solid #58af9b;
+  border-radius: 15px;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.form .botao-form:hover {
+  cursor: pointer;
+  background-color: #fff;
+  border: 1px solid #58af9b;
+  color: #58af9b;
+}
+
+.form h4 {
+  color: #34495e;
+  font-size: 14px;
+  text-align: center;
+  text-decoration: underline;
+  font-style: italic;
+  margin: 0px;
+}

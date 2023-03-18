@@ -19,19 +19,19 @@
         </div>
       </div>
       <p class="p-titulo2">Ou use sua conta:</p>
-      <form class="form" (ngSubmit)="logar()" [formGroup]="forLogar">
+      <form class="form" (ngSubmit)="logar()" [formGroup]="formLogar">
         <label  class="form-login" for="email">
           <i class="far fa-user icon-modify"></i>
           <input type="text" id="email" placeholder="E-mail" formControlName="email">
         </label>
-        <span *ngIf="forLogar.get('email')?.errors?.['required'] && submetido">
+        <span *ngIf="formLogar.get('email')?.errors?.['required'] && submetido">
           Campo obrigatório
         </span>
         <label class="form-login" for="senha">
           <i class="fas fa-lock icon-modify"></i>
           <input type="password" id="senha" placeholder="Senha" formControlName="senha">
         </label>
-        <span *ngIf="forLogar.get('senha')?.errors?.['required'] && submetido">
+        <span *ngIf="formLogar.get('senha')?.errors?.['required'] && submetido">
           Campo obrigatório
         </span>
         <span>{{mensagemErro}}</span>
