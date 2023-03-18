@@ -6,6 +6,12 @@
   height: 100vh;
   font-family: 'Open Sans', sans-serif;
   padding: 500px;
+  flex-direction: column;
+}
+
+.alert {
+  width: 350px;
+  text-align: center;
 }
 
 .caixa-tabela a {

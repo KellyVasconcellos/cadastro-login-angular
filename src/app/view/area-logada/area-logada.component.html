@@ -6,6 +6,9 @@
 </div> -->
 
 <div class="caixa-tabela">
+  <div *ngIf="alert" class="alert alert-success" role="alert">
+    Usuário excluído com sucesso!
+  </div>
   <table class="table">
     <thead>
       <tr>
@@ -20,7 +23,7 @@
         <td>{{item.nome}}</td>
         <td>{{item.email}}</td>
         <td><i class="fa-solid fa-pen-to-square"></i></td>
-        <td><a title="deletar" (click)="open()"><i class="fa-solid fa-trash"></i></a></td>
+        <td><a title="deletar" (click)="open(item.id)"><i class="fa-solid fa-trash"></i></a></td>
       </tr>
     </tbody>
   </table>
