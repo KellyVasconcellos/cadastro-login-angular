@@ -46,7 +46,6 @@
   width: 150px;
   align-self: center;
   border: none;
-  margin-top: 1rem;
   background-color: #58af9b;
   border: 1px solid #58af9b;
   border-radius: 15px;
@@ -68,4 +67,10 @@
   text-decoration: underline;
   font-style: italic;
   margin: 0px;
+}
+
+.modal-body {
+
+  padding-left: 50px;
+  padding-right: 50px;
 }

@@ -6,25 +6,28 @@
 </div> -->
 
 <div class="caixa-tabela">
-  <div *ngIf="alert" class="alert alert-success" role="alert">
+  <div [ngClass]="{'alert_opacity':alert}" class="alert alert-success" role="alert">
     {{mensagem}}
   </div>
-  <table class="table">
-    <thead>
-      <tr>
-        <th scope="col">Nome</th>
-        <th scope="col">E-mail</th>
-        <th scope="col"></th>
-        <th scope="col"></th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let item of usuarios">
-        <td>{{item.nome}}</td>
-        <td>{{item.email}}</td>
-        <td><a title="editar" (click)="modalEditar(item.id)"><i class="fa-solid fa-pen-to-square"></i></a></td>
-        <td><a title="deletar" (click)="modalDeletar(item.id)"><i class="fa-solid fa-trash"></i></a></td>
-      </tr>
-    </tbody>
-  </table>
+  <div class="background-cinza">
+    <h2 class="primeiro-titulo">Usuários Cadastrados</h2>
+    <table class="table">
+      <thead>
+        <tr>
+          <th scope="col">Nome</th>
+          <th scope="col">E-mail</th>
+          <th scope="col"></th>
+          <th scope="col"></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of usuarios">
+          <td>{{item.nome}}</td>
+          <td>{{item.email}}</td>
+          <td><a title="editar" (click)="modalEditar(item.id)"><i class="fa-solid fa-pen-to-square"></i></a></td>
+          <td><a title="deletar" (click)="modalDeletar(item.id)"><i class="fa-solid fa-trash"></i></a></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
 </div>
