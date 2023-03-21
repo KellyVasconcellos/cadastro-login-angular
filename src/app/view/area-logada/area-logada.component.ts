@@ -49,12 +49,16 @@ export class AreaLogadaComponent implements OnInit {
     })
   }
 
-  modalEditar(id:number) {
+  modalEditar(item: IUsuario) {
     const modal = this._modalService.open(ModalEditarComponent, { centered: true });
+    modal.componentInstance.nome = item.nome
+    modal.componentInstance.email = item.email
+    modal.componentInstance.senha = item.senha
+
     modal.closed.subscribe((resposta) => {
       console.log(resposta)
       const usuario: IUsuario = {
-        id: id,
+        id: item.id,
         nome: resposta.nome,
         email: resposta.email,
         senha: resposta.senha,

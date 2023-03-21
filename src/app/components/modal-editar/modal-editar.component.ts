@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 
@@ -8,6 +8,10 @@ import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./modal-editar.component.scss']
 })
 export class ModalEditarComponent implements OnInit {
+
+  @Input() nome = ''
+  @Input() email = ''
+  @Input() senha = ''
 
   formEditar! : FormGroup;
   mensagemErro = "";
@@ -24,6 +28,10 @@ export class ModalEditarComponent implements OnInit {
       email: ['',[ Validators.required,  Validators.email]],
       senha: ['', [Validators.required, Validators.pattern('^(?=.*?[!@#$%¨&*])(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9]).{8,}$')]]
     })
+
+    this.formEditar.get('nome')?.setValue(this.nome);
+    this.formEditar.get('email')?.setValue(this.email);
+    this.formEditar.get('senha')?.setValue(this.senha);
   }
 
   editar():void {

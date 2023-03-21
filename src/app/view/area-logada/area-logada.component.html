@@ -24,7 +24,7 @@
         <tr *ngFor="let item of usuarios">
           <td>{{item.nome}}</td>
           <td>{{item.email}}</td>
-          <td><a title="editar" (click)="modalEditar(item.id)"><i class="fa-solid fa-pen-to-square"></i></a></td>
+          <td><a title="editar" (click)="modalEditar(item)"><i class="fa-solid fa-pen-to-square"></i></a></td>
           <td><a title="deletar" (click)="modalDeletar(item.id)"><i class="fa-solid fa-trash"></i></a></td>
         </tr>
       </tbody>
