@@ -45,7 +45,7 @@ export class CadastrarComponent implements OnInit {
         email: form.email,
         senha: form.senha
       }
-      this.service.cadastrar(usuario).subscribe(()=> {
+      this.service.cadastrar(usuario).subscribe(() => {
         this.router.navigateByUrl("/login")
       })
     }

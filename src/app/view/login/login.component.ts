@@ -35,7 +35,7 @@ export class LoginComponent implements OnInit {
     this.submetido = true
     if (this.formLogar.valid){
       const form = this.formLogar.value
-      this.service.login(form.email).subscribe((resposta : any)=> {
+      this.service.login(form.email).subscribe((resposta : any) => {
         console.log(resposta)
         if (resposta.length) {
           if (resposta[0].senha === form.senha) {
