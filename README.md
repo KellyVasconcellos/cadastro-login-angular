@@ -1,6 +1,6 @@
 # Cadastro e Login
 <h1>
-    <img src="public/apresentacao.gif">
+    <img src="public/apresentacao1.gif">
 </h1>
 
 # Indice
